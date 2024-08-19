@@ -16,9 +16,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - name: cd work_dir
-      run: cd rust-learning/hello_cargo
     - name: Build
-      run: cargo build --verbose
+      run: |
+        cd rust-learning/hello_cargo
+        cargo build --verbose
     - name: Run tests
-      run: cargo test --verbose
+      run: |
+        cd rust-learning/hello_cargo
+        cargo test --verbose

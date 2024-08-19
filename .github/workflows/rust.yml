@@ -16,6 +16,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+    - name: cd work_dir
+      run: cd rust-learning
     - name: Build
       run: cargo build --verbose
     - name: Run tests
